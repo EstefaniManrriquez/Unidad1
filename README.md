@@ -54,19 +54,73 @@ Desde 2010, el enfoque se ha desplazado hacia la Realidad Virtual (VR) y la Real
 - Algoritmo de Bresenham
 
 ### 1.5.1 Formatos de imagen
-- JPEG
-- PNG
-- GIF
-- TIFF
-- SVG
+Los formatos de imagen digital se dividen en dos categorías principales: mapas de bits (ráster) y vectores.
+
+| Formato | Tipo      | Compresión    | Uso Recomendado                                                     |
+|---------|-----------|--------------|---------------------------------------------------------------------|
+| JPEG    | Ráster    | Con pérdida  | Fotografías web; equilibrio entre peso y detalle.                   |
+| PNG     | Ráster    | Sin pérdida  | Imágenes con transparencia (canal alfa); alta fidelidad.            |
+| GIF     | Ráster    | Sin pérdida  | Animaciones cortas; paleta limitada a 256 colores.                  |
+| TIFF    | Ráster    | Variable     | Impresión profesional; soporta capas y alta profundidad de bits.    |
+| SVG     | Vectorial | N/A          | Logotipos e iconos; escalable sin pérdida de calidad.               |
+
+
+##Práctica de dibujo: Un polígono y la Flor de la Vida
+Para comprender la geometría en la graficación, es esencial practicar la construcción manual de formas complejas.
+
+###Construcción de un Pentágono Regular (Inscrito):
+Paso 1: Limpiar y preparar la escena
+•	Antes de dibujar, debemos asegurarnos de que el espacio esté vacío.
+•	En Blender, esto se hace seleccionando todo con la tecla A y borrando con la tecla X.
+
+Paso 2: Crear la estructura del Polígono
+•	En lugar de dibujar línea por línea, usamos una "primitiva" de círculo como base.
+•	Presiona Shift + A, ve a Mesh (Malla) y selecciona Circle (Círculo).
+•	El "truco" del código: En cuanto aparece el círculo, verás una pequeña ventana abajo a la izquierda llamada "Add Circle". Allí, cambia el número de Vertices de 32 a 5.
+•	Al decirle a Blender que solo use 5 puntos, el "círculo" se convierte automáticamente en un pentágono perfecto.
+
+Paso 3: Ubicación exacta (Coordenadas)
+Las coordenadas, el polígono se crea inicialmente en el centro exacto: X=0, Y=0, Z=0.
+
+###Construcción de la Flor de la Vida:
+Esta práctica utiliza coordenadas polares para posicionar círculos de forma perfecta alrededor de un centro.
+1.	Paso 1: Preparación del Entorno
+•	Abrir la Consola de Python: En Blender, cambia una de tus ventanas al editor de texto (Text Editor) para escribir el código.
+•	Importar Librerías: Debes escribir import bpy (para que Python controle Blender) e import math (para hacer los cálculos de los ángulos).
+•	Limpiar la Escena: Antes de empezar, el código debe borrar cualquier objeto existente para que no se amontonen.
+
+3.	Paso 2: Definir las Reglas (Variables)
+•	Debes establecer tres datos importantes en tu código:
+•	Radio: El tamaño que tendrán todos tus círculos (por ejemplo, valor de 3).
+•	Ángulo Inicial: Empezamos en 0 grados.
+•	Paso Angular: Como queremos 6 círculos alrededor, dividimos 360° entre 6, lo que nos da 60° para cada paso.
+
+4.	Paso 3: Crear el Círculo Base
+•	El primer paso es dibujar un círculo justo en el centro de la pantalla, en las coordenadas (0, 0, 0).
+
+5.	Paso 4: El Patrón Repetitivo (Los Círculos Periféricos)
+•	Para que la flor sea perfecta, los centros de los demás círculos deben estar sobre el borde del primer círculo. La lógica es la siguiente:
+•	Calcular la ubicación: Usamos matemáticas para convertir el ángulo en una posición derecha/izquierda (X) y arriba/abajo (Y) usando las fórmulas:
+•	Colocar el círculo: Se le pide a Blender crear un nuevo círculo en esa posición calculada.
+•	Girar el ángulo: Sumamos 60° al ángulo actual para prepararnos para el siguiente círculo.
+
+6.	Paso 5: El Reto del Ciclo (Automatización)
+•	Para no escribir el código muchas veces, se utiliza una estructura llamada while. El programa repetirá automáticamente los cálculos y la creación de círculos mientras el ángulo sea menor a 360°.
+•	Esto asegura que los círculos se distribuyan uniformemente hasta completar la figura circular que ves en las imágenes de tu práctica.
+
+•	Resultado Final: Al ejecutar este proceso, obtendrás una figura simétrica donde cada círculo se intersecta con el centro del anterior, formando el patrón armonioso de la Flor de la Vida.
+
+
 
 ### 1.6 Procesamiento de mapas de bits
-- Resolución
-- Profundidad de bits
-- Cuantización
-- Remuestreo
+El procesamiento de mapas de bits implica la manipulación de imágenes compuestas por una rejilla de píxeles.28 A diferencia de los vectores, estas imágenes pierden calidad al ser ampliadas, un fenómeno conocido como pixelación.
+Resolución y Profundidad de Color
+●	Resolución: Se refiere a la cantidad de píxeles por unidad de superficie (PPI o DPI). A mayor cantidad de píxeles, mayor detalle y nitidez.
+●	Profundidad de Bits: Determina cuántos colores puede mostrar cada píxel. Un sistema de 1 bit es blanco y negro; 8 bits permiten 256 colores (color indexado); y 24 bits permiten 16.7 millones de colores (color verdadero).
+●	Cuantización: Es el proceso de reducir el rango continuo de colores de una imagen a un conjunto discreto de valores. Si la cuantización es demasiado baja, aparecen "bandas de color" en los gradientes.
+Operaciones Comunes en Mapas de Bits
+Las herramientas modernas permiten realizar el remuestreo (resampling) para cambiar el tamaño de una imagen. El remuestreo a una resolución más baja elimina datos (submuestreo), mientras que aumentarla requiere interpolación, lo que puede difuminar la imagen.44 Además, la conversión de mapas de bits a vectores se conoce como vectorización (o autotrace), un proceso complejo que intenta encontrar fórmulas matemáticas que describan los bordes de los píxeles.
 
----
 
 ## Bibliografias
 1.	1.1 Historia y Evolución de La Graficación Por Computadora | PDF | Pixar - Scribd, fecha de acceso: febrero 22, 2026, https://es.scribd.com/document/595159397/1-1-Historia-y-Evolucion-de-la-Graficacion-por-Computadora
