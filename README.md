@@ -68,14 +68,25 @@ Desde 2010, el enfoque se ha desplazado hacia la Realidad Virtual (VR) y la Real
 
 ---
 
-## 🧪 Prácticas en Blender
-- Iluminación de un cubo
-- Construcción de un pentágono regular
-- Flor de la Vida mediante Python
+## Bibliografias
+1.	1.1 Historia y Evolución de La Graficación Por Computadora | PDF | Pixar - Scribd, fecha de acceso: febrero 22, 2026, https://es.scribd.com/document/595159397/1-1-Historia-y-Evolucion-de-la-Graficacion-por-Computadora
+3.	Marco Teórico - URBE, fecha de acceso: febrero 22, 2026, https://virtual.urbe.edu/tesispub/0054432/cap02.pdf
+4.	Introducción a la graficación por computadora - Proyecto Descartes, fecha de acceso: febrero 22, 2026, https://proyectodescartes.org/iCartesiLibri/materiales_didacticos/GraficacionComputadora/index.html
+5.	Aplicaciones Gráficas por Computadora - YouTube, fecha de acceso: febrero 22, 2026, https://www.youtube.com/watch?v=R1vI4VCKSEs
+6.	Historia y la evolución de la graficación por computadora - Línea del tiempo - Prezi, fecha de acceso: febrero 22, 2026, https://prezi.com/p/t0p1yf8q2jof/historia-y-la-evolucion-de-la-graficacion-por-computadora-linea-del-tiempo/
+7.	Computación gráfica - Wikipedia, la enciclopedia libre, fecha de acceso: febrero 22, 2026, https://es.wikipedia.org/wiki/Computaci%C3%B3n_gr%C3%A1fica
+8.	La Fascinante Historia y Evolución de las Tarjetas Gráficas (GPU) - YouTube, fecha de acceso: febrero 22, 2026, https://www.youtube.com/watch?v=d2K1thETBx8
+9.	Aplicaciones de las gráficas por computadora - UAEH, fecha de acceso: febrero 22, 2026, https://www.uaeh.edu.mx/docencia/P_Presentaciones/icbi/asignatura/aplicaciones_graf_comp_carmen_vera_marzo2014.pdf
+10.	graficación por computadora en el software médico. - BINASSS, fecha de acceso: febrero 22, 2026, https://www.binasss.sa.cr/revistas/rcafss/v13n2/art6.pdf
+11.	Gráficos de computadora - Ciencia y tecnología - SciTechnol, fecha de acceso: febrero 22, 2026, https://spanish.scitechnol.com/scholarly/computer-graphics-journals-articles-ppts-list.php
+12.	Matrices y transformaciones lineales, fecha de acceso: febrero 22, 2026, https://www.matem.unam.mx/~max/GEA2/N5.pdf
+13.	UAM1114.pdf, fecha de acceso: febrero 22, 2026, http://148.206.53.231/tesiuami/UAM1114.pdf
+14.	Vector (matemáticas y física) - Wikipedia, la enciclopedia libre, fecha de acceso: febrero 22, 2026, https://es.wikipedia.org/wiki/Vector_(matem%C3%A1ticas_y_f%C3%ADsica)
+15.	Vectores y notación (artículo) - Khan Academy, fecha de acceso: febrero 22, 2026, https://es.khanacademy.org/a/vectors-and-notation-mvc
+16.	Matemáticas para Gráficos 3D con OpenGL - Código en Llamas, fecha de acceso: febrero 22, 2026, https://codigoenllamas.com/matematicas-para-graficos-3d-con-opengl
+17.	Transformaciones en la graficación por computadora. Año 1. Número 1, fecha de acceso: febrero 22, 2026, https://www.aliatuniversidades.com.mx/conexxion/blog/conexxion/index.php/transformaciones-en-la-graficacion-por-computadora-ano-1-numero-1
+18.	Modelos de Color RGB, CMY, HSV y HSL - Tema 1.4 | PDF - Scribd, fecha de acceso: febrero 22, 2026, https://es.scribd.com/document/599213324/Modelos-de-color-RGB-CMY-HSV-y-HSL-Tema-1-4
+19.	Tema 1: INTRODUCCIÓN A LAS IMÁGENES DIGITALES, fecha de acceso: febrero 22, 2026, https://asignatura.us.es/imagendigital/Tema1.pdf
+20.	Colorimetría III: La Objetividad del Color en RGB, HSV y HSL. - Artesolar, fecha de acceso: febrero 22, 2026, https://www.artesolar.com/colorimetria-espacios-rgb-hsv-hsl/
 
----
 
-## 📎 Documento completo
-El desarrollo teórico completo se encuentra en:
-
-`/documentacion/Investigacion1.docx`
