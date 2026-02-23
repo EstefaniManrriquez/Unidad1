@@ -65,7 +65,7 @@ Los formatos de imagen digital se dividen en dos categorías principales: mapas 
 | SVG     | Vectorial | N/A          | Logotipos e iconos; escalable sin pérdida de calidad.               |
 
 
-##Práctica de dibujo: Un polígono y la Flor de la Vida
+####Práctica de dibujo: Un polígono y la Flor de la Vida
 Para comprender la geometría en la graficación, es esencial practicar la construcción manual de formas complejas.
 
 ###Construcción de un Pentágono Regular (Inscrito):
