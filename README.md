@@ -85,7 +85,7 @@ Con la luz seleccionada, busca en el menú de la derecha un icono de una bombill
 Donde dice Color, haz clic en la barra blanca. Se abrirá un círculo de colores.
 5. Ver el resultado: Para ver cómo queda realmente, presiona la tecla Z y elige la opción Rendered. Ahora el cubo brilla con el color que elegimos posteriormente.
 
-![Cubo](CUBO.png)
+![CUBO](CUBO.png)
 
 
 ### 1.5 Representación de líneas y polígonos
