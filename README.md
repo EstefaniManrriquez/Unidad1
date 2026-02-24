@@ -30,28 +30,71 @@ Desde 2010, el enfoque se ha desplazado hacia la Realidad Virtual (VR) y la Real
 
 
 ## 1.2 Áreas de aplicación
-- Ingeniería y arquitectura
-- Medicina
-- Entretenimiento
-- Educación
-- Ciencia y gestión
-- Arte digital
+La graficación por computadora es omnipresente en la sociedad tecnológica contemporánea. Su capacidad para sintetizar imágenes y modificar información visual del mundo real ha generado un impacto revolucionario en múltiples sectores.
+
+| Área de Aplicación        | Función Principal                                                                 | Ejemplo de Uso                                                             
+|---------------------------|------------------------------------------------------------------------------------|---------------------------------------------|
+| Ingeniería y Arquitectura | Diseño y modelado de prototipos virtuales (CAD/CAM).                              | Diseño de aeronaves, barcos, edificios y circuitos integrados.       |
+| Medicina                  | Visualización clínica en tres dimensiones para diagnóstico y planeación quirúrgica.| Reconstrucción de tomografías, ortopedia y simulación de cirugías 
+complejas.                  |
+| Entretenimiento           | Creación de efectos visuales, películas de animación y videojuegos.               | Producción de películas sintéticas, publicidad y entornos 
+inmersivos.                 |
+| Educación y Capacitación  | Uso de simuladores y herramientas de ayuda educativa.                             | Simuladores de vuelo y formación de operadores de maquinaria
+pesada.                     |
+| Ciencia y Gestión         | Visualización de datos complejos y generación de resúmenes estadísticos.          | Mapas climáticos, diagramas financieros y visualización científica.   |
+| Arte Digital              | Creación de obras de arte mediante software especializado y hardware interactivo. | Pintura digital, escultura virtual y algoritmos fractales.  
+|
+El uso de gráficos en medicina, por ejemplo, ha permitido reducir los riesgos quirúrgicos al permitir que los médicos ensayen procedimientos en modelos 3D precisos antes de entrar al quirófano.2 En la industria, el diseño asistido por computadora permite probar la aerodinámica de un vehículo sin necesidad de construir múltiples prototipos físicos, ahorrando millones de dólares en costos de desarrollo.
+
 
 ### 1.3 Aspectos matemáticos
-- Vectores
-- Producto punto
-- Matrices de transformación
-- Coordenadas homogéneas
+La graficación por computadora es, en su núcleo, una aplicación práctica del álgebra lineal, la geometría analítica y el cálculo. Cada punto que vemos en una pantalla es el resultado de una serie de operaciones matemáticas que transforman coordenadas espaciales en coordenadas de píxeles.
+Vectores y espacios vectoriales
+Un vector es una lista ordenada de números que representa una posición o una dirección en el espacio. En graficación, se utilizan comúnmente vectores en   y  . Un vector columna se representa como:
+![Uploading image.png…]()
+
+Las operaciones fundamentales incluyen la suma (para traslación), la multiplicación por un escalar (para escalamiento) y el producto punto, el cual es vital para calcular la iluminación basándose en el ángulo entre la fuente de luz y la normal de la superficie.
+Matrices de transformación
+Las transformaciones lineales se representan convenientemente mediante matrices. Al multiplicar una matriz por un vector, se obtiene una nueva posición que representa el objeto transformado.
+1.	Traslación: Mover un objeto en el espacio. Para lograr esto mediante multiplicación de matrices, se emplean coordenadas homogéneas.
+2.	Escalamiento: Aumentar o disminuir el tamaño. Se logra multiplicando las componentes del vector por factores de escala  .
+3.	Rotación: Girar un objeto sobre un eje. Las matrices de rotación utilizan funciones trigonométricas   para determinar las nuevas coordenadas.
+La matriz de traslación en coordenadas homogéneas de   es:
+![Uploading image.png…]()
+
+Este sistema unificado permite combinar múltiples transformaciones (rotar, luego escalar, luego trasladar) en una sola matriz maestra mediante el producto de matrices, optimizando drásticamente el rendimiento del procesamiento.
+
 
 ### 1.4 Modelos de color
-- RGB
-- CMY / CMYK
-- HSV
-- HSL
+El color en sistemas digitales es un modelo matemático diseñado para aproximar la percepción humana. Existen diferentes modelos dependiendo de si el medio es luz emitida o pigmento reflejado.
+Modelo RGB (Red, Green, Blue)
+Es un modelo aditivo utilizado en pantallas de computadora, televisores y proyectores. Se basa en la mezcla de los tres colores primarios de la luz. Al sumar intensidades máximas de rojo, verde y azul, se obtiene luz blanca. Cada canal suele tener un rango de   a   (8 bits), lo que permite representar   millones de colores únicos (24 bits en total).
+Modelo CMY (Cyan, Magenta, Yellow)
+Es un modelo sustractivo utilizado principalmente en la impresión. A diferencia del RGB, funciona absorbiendo luz. Los pigmentos de cian, magenta y amarillo filtran la luz blanca reflejada. En la práctica, se añade el negro (K) para formar el modelo CMYK, ya que la mezcla de CMY puro produce un marrón oscuro ineficiente.
+Modelos HSV y HSL
+Estos modelos están orientados a la percepción humana del color, facilitando la selección y el ajuste cromático para artistas y diseñadores.
+●	Hue (Tono): Define el matiz o "color" puro en un círculo de   a   (  es rojo,   verde,   azul).
+●	Saturation (Saturación): La pureza del color. Una saturación del   es gris, mientras que el   es el color puro.
+●	Value/Lightness (Valor/Luminosidad): La intensidad de la luz. Determina qué tan claro u oscuro es el color, desde el negro ( ) hasta el brillo máximo ( ).
+Tutorial práctico: Iluminación de un cubo en Blender
+Para que tu cubo no se vea plano y oscuro, necesitamos darle luz.
+1.	Ingresamos a blender y por defecto ya taer un cubo, con una cama y iluminación trabajaremos en ellos.
+2.	La Lámpara: Por defecto, Blender trae una luz. Haz clic en ella (parece un sol pequeño con una línea).
+3.	Mover la luz: Presionamos G y muévela cerca de una de las esquinas superiores del cubo. Verás que la cara que apunta a la luz se aclara y la de abajo se oscurece.
+4.	Cambiar el color de la luz:
+Con la luz seleccionada, busca en el menú de la derecha un icono de una bombilla verde.
+Donde dice Color, haz clic en la barra blanca. Se abrirá un círculo de colores.
+5. Ver el resultado: Para ver cómo queda realmente, presiona la tecla Z y elige la opción Rendered. Ahora el cubo brilla con el color que elegimos posteriormente.
+
 
 ### 1.5 Representación de líneas y polígonos
-- Algoritmo DDA
-- Algoritmo de Bresenham
+La representación de formas geométricas en una pantalla rasterizada requiere algoritmos que decidan qué píxeles deben encenderse para aproximar una línea o un polígono continuo.
+
+-Algoritmo DDA (Digital Differential Analyzer)
+Es un método incremental basado en la ecuación de la recta  . Se calcula el incremento necesario en cada paso para aproximar la trayectoria. Si la pendiente es menor a  , se incrementa   de uno en uno y se calcula el valor de   correspondiente, redondeándolo al entero más cercano. Aunque es sencillo, requiere operaciones de punto flotante que pueden ser lentas en hardware sin procesadores dedicados.
+-Algoritmo de Bresenham
+Es el estándar de la industria debido a su eficiencia extrema. Utiliza únicamente aritmética de enteros y un parámetro de decisión para determinar cuál de los dos píxeles adyacentes está más cerca de la trayectoria ideal. Al evitar divisiones y números decimales, es ideal para su implementación en microchips y controladores gráficos de bajo nivel.
+
 
 ### 1.5.1 Formatos de imagen
 Los formatos de imagen digital se dividen en dos categorías principales: mapas de bits (ráster) y vectores.
@@ -65,10 +108,10 @@ Los formatos de imagen digital se dividen en dos categorías principales: mapas 
 | SVG     | Vectorial | N/A          | Logotipos e iconos; escalable sin pérdida de calidad.               |
 
 
-####Práctica de dibujo: Un polígono y la Flor de la Vida
+Práctica de dibujo: Un polígono y la Flor de la Vida
 Para comprender la geometría en la graficación, es esencial practicar la construcción manual de formas complejas.
 
-###Construcción de un Pentágono Regular (Inscrito):
+Construcción de un Pentágono Regular (Inscrito):
 Paso 1: Limpiar y preparar la escena
 •	Antes de dibujar, debemos asegurarnos de que el espacio esté vacío.
 •	En Blender, esto se hace seleccionando todo con la tecla A y borrando con la tecla X.
@@ -82,7 +125,7 @@ Paso 2: Crear la estructura del Polígono
 Paso 3: Ubicación exacta (Coordenadas)
 Las coordenadas, el polígono se crea inicialmente en el centro exacto: X=0, Y=0, Z=0.
 
-###Construcción de la Flor de la Vida:
+Construcción de la Flor de la Vida:
 Esta práctica utiliza coordenadas polares para posicionar círculos de forma perfecta alrededor de un centro.
 1.	Paso 1: Preparación del Entorno
 •	Abrir la Consola de Python: En Blender, cambia una de tus ventanas al editor de texto (Text Editor) para escribir el código.
