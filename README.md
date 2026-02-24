@@ -51,8 +51,7 @@ El uso de gráficos en medicina, por ejemplo, ha permitido reducir los riesgos q
 La graficación por computadora es, en su núcleo, una aplicación práctica del álgebra lineal, la geometría analítica y el cálculo. Cada punto que vemos en una pantalla es el resultado de una serie de operaciones matemáticas que transforman coordenadas espaciales en coordenadas de píxeles.
 Vectores y espacios vectoriales
 Un vector es una lista ordenada de números que representa una posición o una dirección en el espacio. En graficación, se utilizan comúnmente vectores en   y  . Un vector columna se representa como:
-![Uploading image.png…]()
-
+![Formula](aspecto1.png)
 Las operaciones fundamentales incluyen la suma (para traslación), la multiplicación por un escalar (para escalamiento) y el producto punto, el cual es vital para calcular la iluminación basándose en el ángulo entre la fuente de luz y la normal de la superficie.
 Matrices de transformación
 Las transformaciones lineales se representan convenientemente mediante matrices. Al multiplicar una matriz por un vector, se obtiene una nueva posición que representa el objeto transformado.
@@ -60,7 +59,7 @@ Las transformaciones lineales se representan convenientemente mediante matrices.
 2.	Escalamiento: Aumentar o disminuir el tamaño. Se logra multiplicando las componentes del vector por factores de escala  .
 3.	Rotación: Girar un objeto sobre un eje. Las matrices de rotación utilizan funciones trigonométricas   para determinar las nuevas coordenadas.
 La matriz de traslación en coordenadas homogéneas de   es:
-![Uploading image.png…]()
+![Formula2](aspecto2.png)
 
 Este sistema unificado permite combinar múltiples transformaciones (rotar, luego escalar, luego trasladar) en una sola matriz maestra mediante el producto de matrices, optimizando drásticamente el rendimiento del procesamiento.
 
@@ -85,6 +84,8 @@ Para que tu cubo no se vea plano y oscuro, necesitamos darle luz.
 Con la luz seleccionada, busca en el menú de la derecha un icono de una bombilla verde.
 Donde dice Color, haz clic en la barra blanca. Se abrirá un círculo de colores.
 5. Ver el resultado: Para ver cómo queda realmente, presiona la tecla Z y elige la opción Rendered. Ahora el cubo brilla con el color que elegimos posteriormente.
+
+![Cubo](CUBO.png)
 
 
 ### 1.5 Representación de líneas y polígonos
@@ -111,7 +112,7 @@ Los formatos de imagen digital se dividen en dos categorías principales: mapas 
 Práctica de dibujo: Un polígono y la Flor de la Vida
 Para comprender la geometría en la graficación, es esencial practicar la construcción manual de formas complejas.
 
-Construcción de un Pentágono Regular (Inscrito):
+Construcción de un Pentágono Regular :
 Paso 1: Limpiar y preparar la escena
 •	Antes de dibujar, debemos asegurarnos de que el espacio esté vacío.
 •	En Blender, esto se hace seleccionando todo con la tecla A y borrando con la tecla X.
@@ -124,6 +125,9 @@ Paso 2: Crear la estructura del Polígono
 
 Paso 3: Ubicación exacta (Coordenadas)
 Las coordenadas, el polígono se crea inicialmente en el centro exacto: X=0, Y=0, Z=0.
+
+![Resultados](Resultados.png)
+![codigo](codigo.png)
 
 Construcción de la Flor de la Vida:
 Esta práctica utiliza coordenadas polares para posicionar círculos de forma perfecta alrededor de un centro.
@@ -153,7 +157,8 @@ Esta práctica utiliza coordenadas polares para posicionar círculos de forma pe
 
 •	Resultado Final: Al ejecutar este proceso, obtendrás una figura simétrica donde cada círculo se intersecta con el centro del anterior, formando el patrón armonioso de la Flor de la Vida.
 
-
+![Resultadoflor](resultado.png)
+![codigo](scrip.png)
 
 ### 1.6 Procesamiento de mapas de bits
 El procesamiento de mapas de bits implica la manipulación de imágenes compuestas por una rejilla de píxeles.28 A diferencia de los vectores, estas imágenes pierden calidad al ser ampliadas, un fenómeno conocido como pixelación.
